@@ -57,7 +57,7 @@ core:                                       # Core options (http://github.com/hi
 
 import:                                     # Import options (http://github.com/histograph/import)
   dirs:  
-    - /Users/tom/Develop/histograph/im_data      # Array of absolute or relative paths to directories containing
+    - /Users/tom/Develop/tnl/im_data      # Array of absolute or relative paths to directories containing
                                             #   Histograph datasets which can be imported by import module
   s3:                                       # Import can also import datasets from Amazon Web Services S3
     region:                                 #   Set the S3 region, access keys and buckets in this section.

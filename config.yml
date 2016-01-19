@@ -56,6 +56,8 @@ core:                                       # Core options (http://github.com/hi
 
 
 import:                                     # Import options (http://github.com/histograph/import)
+  diffTool: diff
+
   dirs:  
     - /Users/tom/Develop/tnl/im_data      # Array of absolute or relative paths to directories containing
                                             #   Histograph datasets which can be imported by import module
@@ -64,6 +66,7 @@ import:                                     # Import options (http://github.com/
     accessKeyId:
     secretAccessKey:
     buckets:                                # Array of S3 buckets
+    
 
 schemas:                                    # Schema/ontology options (http://github.com/histograph/schema)
   baseUri: http://rdf.transparantnederland.nl/

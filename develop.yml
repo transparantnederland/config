@@ -1,16 +1,17 @@
 api:                                        # API and IO options (http://github.com/histograph/api
   bindHost: 0.0.0.0                         #   and http://github.com/histograph/io)
   bindPort: 3001
-  baseUrl: https://api.transparantnederland.nl
+  baseUrl: http://localhost:3001
   defaultPathRelation: tnl:related            # Default relation that is used to solve combined
                                             #   queries, e.g. 'hoorn, friesland'
   hairRelations:                            # Non-equivalence PIT-PIT relations returned by
     - tnl:parent                            #   neo4j-plugin, in hairs array
 
+  ds_corrections: z_corrections_
 
   exampleUrls:
     - "/search?q=hermans"
-    - "/orgsFromPerson?id=nevenfuncties/NkS8-0u-ShGg"
+    - "/search?id=overheidsorganisaties/12357"
     - "/search?q=hermans&dataset=nevenfuncties"
     - "/datasets"
     - "/datasets/overheidsorganisaties"
@@ -24,7 +25,7 @@ api:                                        # API and IO options (http://github.
   # Absolute or relative directory on file system where API's IO module keeps uploaded
   #   NDJSON files. IO keeps __two__ copies of each file, please make sure HD has enough
   #   free space!
-  dataDir: /var/tnl/data
+  dataDir: /Users/tom/Develop/histograph/db_data
   # Credentials of API's admin owner - this name + password is needed when creating/deleting
   #   datasets and uploading data using the REST API
   admin:
@@ -55,9 +56,10 @@ core:                                       # Core options (http://github.com/hi
 
 
 import:                                     # Import options (http://github.com/histograph/import)
+  diffTool: diff
 
   dirs:  
-    - /home/tom/data      # Array of absolute or relative paths to directories containing
+    - /Users/tom/Develop/tnl/im_data      # Array of absolute or relative paths to directories containing
                                             #   Histograph datasets which can be imported by import module
   s3:                                       # Import can also import datasets from Amazon Web Services S3
     region:                                 #   Set the S3 region, access keys and buckets in this section.
@@ -87,8 +89,6 @@ schemas:                                    # Schema/ontology options (http://gi
     - tnl:advisor
     - tnl:employee
     - tnl:lobbyist
-    - tnl:spokesperson
-
   equivalence: tnl:same
   
   

@@ -1,3 +1,4 @@
+
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -39,16 +40,16 @@
     "api": {
       "type": "object",
       "properties": {
-        
+
         "ds_corrections": "string",
-        
+
         "exampleUrls": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        
+
         "defaultPathRelation": {
           "type": "string"
         },
@@ -75,7 +76,7 @@
         "dataDir": {
           "type": "string"
         },
-        
+
         "admin": {
           "type": "object",
           "properties": {
@@ -203,45 +204,6 @@
         "batchTimeout"
       ]
     },
-    "viewer": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "language",
-        "mode",
-        "logo",
-        "color",
-        "suffixFilters"
-      ],
-      "properties": {
-        "language": {
-          "type": "string"
-        },
-        "mode": {
-          "type": "string",
-          "enum": [
-            "simple",
-            "advanced"
-          ]
-        },
-        "logo": {
-          "type": [
-            "string", "null"
-          ]
-        },
-        "color": {
-          "type": "string"
-        },
-        "suffixFilters": {
-          "type": "array"
-        }
-      }
-    },
-    "data": {
-      "type": "object",
-      "properties": {
-      }
-    },
     "import": {
       "type": "object",
       "properties": {
@@ -291,8 +253,6 @@
     "redis",
     "elasticsearch",
     "neo4j",
-    "viewer",
-    "data",
     "import",
     "logo"
   ]

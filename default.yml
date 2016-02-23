@@ -87,6 +87,8 @@ schemas:                                    # Schema/ontology options (http://gi
     - tnl:advisor
     - tnl:employee
     - tnl:lobbyist
+    - tnl:spokesperson
+
   equivalence: tnl:same
 
 
